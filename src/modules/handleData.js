@@ -28,8 +28,8 @@ async function processWeatherData(location) {
       conditions: current.conditions || 'Unknown',
       icon: current.icon || 'default',
     };
-
-    return console.log(processedData);
+    console.log('Processed Weather Data:', processedData);
+    return processedData;
   } catch (error) {
     console.error('Error processing weather data:', error);
     return null;
