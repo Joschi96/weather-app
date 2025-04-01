@@ -1,5 +1,6 @@
-import {  } from './modules/getData.js';
-import {  } from './modules/handleData.js';
-import {  } from './modules/renderData.js';
-import {  } from './modules/handleForm.js';
+import getWeatherData from './modules/getData';
+// import {  } from './modules/handleData';
+// import {  } from './modules/renderData';
+// import {  } from './modules/handleForm';
 
+getWeatherData('Vienna');
