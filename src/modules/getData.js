@@ -1,7 +1,16 @@
-// Functions for fetching data from the API (visualcrossing.com)
-// It takes a location and returns the weather data for that location in JSON format
+// Function for fetching data from the API (visualcrossing.com)
+// It takes a location and returns the weather data of the current day
+// and time for that location in JSON format
+
+import mockWeatherData from './mockWeatherData';
+
+const useMockData = true; // Set to true to use mock data
 
 async function getWeatherData(location) {
+  if (useMockData) {
+    console.log('Returning mock data');
+    return mockWeatherData;
+  }
   const apiKey = 'B8NJ3Q8FQQMQSVV7BWG7KSGX2';
   // bring date to  "yyyy-MM-ddTHH:mm:ss" format
   const date = new Date().toISOString().slice(0, 19);
@@ -9,7 +18,7 @@ async function getWeatherData(location) {
   try {
     const response = await fetch(apiUrl);
     const data = await response.json();
-    return console.log(data);
+    return data;
   } catch (error) {
     console.error('Error fetching weather data:', error);
     return null;
