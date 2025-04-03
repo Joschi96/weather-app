@@ -4,7 +4,7 @@
 
 import mockWeatherData from './mockWeatherData';
 
-const useMockData = true; // Set to true to use mock data
+const useMockData = false; // Set to true to use mock data
 
 async function getWeatherData(location) {
   if (useMockData) {

@@ -7,6 +7,7 @@ module.exports = {
     filename: "bundle.js",
     path: path.resolve(__dirname, "dist"),
     clean: true, // ensures the dist folder is cleared before each build
+    assetModuleFilename: 'assets/[name][hash][ext][query]',
   },
   mode: 'development',
   devtool: "eval-source-map",
@@ -25,6 +26,10 @@ module.exports = {
       {
         test: /\.css$/,
         use: ["style-loader", "css-loader"],
+      },
+      {
+        test: /\.(png|jpe?g|gif|svg)$/i,
+        type: 'asset/resource',
       },
     ],
   },
