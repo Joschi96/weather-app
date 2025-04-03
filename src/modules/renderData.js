@@ -59,4 +59,5 @@ async function renderData(data) {
   await setWeatherBackground(data.icon);
 }
 
+export { setWeatherBackground };
 export default renderData;
