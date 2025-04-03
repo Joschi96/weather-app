@@ -7,7 +7,27 @@
   </head>
   <body>
     <div class="content">
-
+      <div class="form-container">
+        <form id="weather-form">
+          <input type="text" id="address" placeholder="Enter location" required />
+          <button type="submit">Get Weather</button>
+        </form>
+      </div>
+      <div id="weather-result" class="hidden">
+        <div class="title-container">
+          <h2 class="condition"></h2>
+          <h1 class="address"></h1>
+        </div>
+        <div class="temp-container">
+          <div class="temp"></div>
+          <div class="degree">°C</div>
+        </div>
+        <div class="aditional-info">
+          <div class="feelslike">FEELS LIKE: </div>
+          <div class="humidity">HUMIDITY: </div>
+          <div class="wind">WIND: </div>
+        </div>
+      </div>
     </div>
     <footer>
       by <a href="">Joschi96 <img src="" alt="gitHub"></a> | <a href="">Weather App</a>
