@@ -55,7 +55,7 @@ async function renderData(data) {
   updateUIElement('.wind', `WIND: ${data.windSpeed} km/h`);
 
   // Show the relevant elements
-  showElement('.weather-data');
+  showElement('.weather-result');
   await setWeatherBackground(data.icon);
 }
 
